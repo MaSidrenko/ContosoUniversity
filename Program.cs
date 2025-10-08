@@ -53,3 +53,4 @@ app.MapControllerRoute(
 
 app.Run();
 // "DefaultConnection": "Server=mssql.local,1433;Database=ContosoUniversity;Trusted_Connection=true;TrustServerCertificate=true;"
+// "DefaultConnection": "host=172.17.208.1;port=5432;database=ContosoUniversity;username=postgres;password=291305"
