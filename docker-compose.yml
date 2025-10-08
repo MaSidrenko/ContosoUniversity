@@ -1,0 +1,31 @@
+# version '3.9':
+
+services:
+  web:
+    build: .
+    container_name: contoso_web
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      ConnectionStrings__DefaultConnection: "Host=db;Port=5432;Database=ContosoUniversity;Username=postgres;Password=291305"
+    networks:
+      - contoso_network
+
+  db:
+    image: postgres:17
+    container_name: contoso_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 291305
+      POSTGRES_DB: contoso_db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - contoso_network
+volumes:
+  pgdata:
+
+networks:
+  contoso_network:
