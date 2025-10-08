@@ -9,6 +9,7 @@ services:
     depends_on:
       - db
     environment:
+      ASPNETCORE_ENVIRONMENT: Development
       ConnectionStrings__DefaultConnection: "Host=db;Port=5432;Database=ContosoUniversity;Username=postgres;Password=291305"
     networks:
       - contoso_network
