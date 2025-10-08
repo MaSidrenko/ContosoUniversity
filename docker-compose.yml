@@ -43,7 +43,7 @@ services:
     ports:
       - "8080:8080"
     environment:
-      ASPNETCORE_ENVIRONMENT: Development
+      # ASPNETCORE_ENVIRONMENT: Development
       ConnectionStrings__DefaultConnection: "Host=dpg-d3j1sl49c44c73b4phjg-a.render.com;Port=5432;Database=contosouniversity;Username=contosouniversity_user;Password=H06JIMB0pEf15DMtk1sY3RPrkGpdyzI5;SSL Mode=Require;Trust Server Certificate=true"
     dns:
       - 1.1.1.1
