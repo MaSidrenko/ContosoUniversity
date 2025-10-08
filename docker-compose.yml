@@ -10,9 +10,9 @@ services:
       - db
     environment:
       ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__DefaultConnection: "Host=dpg-d3j1sl49c44c73b4phjg-a.render.com;Port=5432;Database=contosouniversity;Username=contosouniversity_user;Password=H06JIMB0pEf15DMtk1sY3RPrkGpdyzI5;SSL Mode=Require;Trust Server Certificate=true"
       # ConnectionStrings__DefaultConnection: "Host=db;Port=5432;Database=ContosoUniversity;Username=postgres;Password=291305"
       # ConnectionStrings__DefaultConnection: "postgresql://contosouniversity_user:H06JIMB0pEf15DMtk1sY3RPrkGpdyzI5@dpg-d3j1sl49c44c73b4phjg-a/contosouniversity"
-      ConnectionStrings__DefaultConnection = "Host=dpg-d3j1sl49c44c73b4phjg-a.render.com;Port=5432;Database=contosouniversity;Username=contosouniversity_user;Password=H06JIMB0pEf15DMtk1sY3RPrkGpdyzI5;SSL Mode=Require;Trust Server Certificate=true"
     networks:
       - contoso_network
 
