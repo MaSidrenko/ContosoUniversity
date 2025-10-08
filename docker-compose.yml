@@ -6,8 +6,8 @@ services:
     container_name: contoso_web
     ports:
       - "8080:8080"
-    depends_on:
-      - db
+    # depends_on:
+    #   - db
     environment:
       ASPNETCORE_ENVIRONMENT: Production
       ConnectionStrings__DefaultConnection: "Host=dpg-d3j1sl49c44c73b4phjg-a.render.com;Port=5432;Database=contosouniversity;Username=contosouniversity_user;Password=H06JIMB0pEf15DMtk1sY3RPrkGpdyzI5;SSL Mode=Require;Trust Server Certificate=true"
@@ -16,15 +16,15 @@ services:
     # networks:
     #   - contoso_network
 
-  db:
-    image: postgres:17
-    container_name: contoso_db
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 291305
-      POSTGRES_DB: contoso_db
-    volumes:
-      - pgdata:/var/lib/postgresql/data
+  # db:
+  #   image: postgres:17
+  #   container_name: contoso_db
+  #   environment:
+  #     POSTGRES_USER: postgres
+  #     POSTGRES_PASSWORD: 291305
+  #     POSTGRES_DB: contoso_db
+  #   volumes:
+  #     - pgdata:/var/lib/postgresql/data
     # networks:
     #   - contoso_network
 volumes:
