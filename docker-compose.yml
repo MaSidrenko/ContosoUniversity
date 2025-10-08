@@ -30,5 +30,5 @@ services:
 volumes:
   pgdata:
 
-networks:
-  contoso_network:
+# networks:
+#   contoso_network:
